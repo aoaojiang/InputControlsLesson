@@ -2,4 +2,13 @@
     <string name="app_name">InputControls</string>
     <string name="button1">按钮1</string>
     <string name="button2">按钮2</string>
+
+    <string-array name="names">
+        <item>Jack</item>
+        <item>Jackson</item>
+        <item>John</item>
+        <item>Johnson</item>
+        <item>Jane</item>
+        <item>Jerry</item>
+    </string-array>
 </resources>

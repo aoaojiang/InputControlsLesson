@@ -3,6 +3,8 @@ package com.example.jiangpei.inputcontrols;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton imb1;
 
     EditText nameInput;
+    AutoCompleteTextView usernameInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imb1 = (ImageButton) findViewById(R.id.imageButton);
 
         nameInput = (EditText) findViewById(R.id.editText);
+        usernameInput = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
+
+        String[] names = getResources().getStringArray(R.array.names);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
+        usernameInput.setAdapter(adapter);
 
         b1.setOnClickListener(this);
         b2.setOnClickListener(this);
